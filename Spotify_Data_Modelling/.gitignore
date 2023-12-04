@@ -4,8 +4,5 @@
 # Ignore __pycache__ folder
 __pycache__
 
-# Ignore data folder
-data
-
 # Ignore config file
 config.py

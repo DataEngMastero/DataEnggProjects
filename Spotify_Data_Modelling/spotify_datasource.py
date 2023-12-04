@@ -23,11 +23,11 @@ def get_categories(spotify):
         category_name_list.append(category['name'])
     
     category_df = pd.DataFrame({'category_id': category_id_list, 'category_name': category_name_list})
-    category_df.to_csv('data/category.csv', index=False)
+    category_df.to_csv('spotify_data/category.csv', index=False)
 # get_categories(spotify)
 
 def get_category_playlists(spotify):
-    category_df = pd.read_csv('data/category.csv')
+    category_df = pd.read_csv('spotify_data/category.csv')
     category_id_list = []
     description_list = []
     playlist_id_list = []
@@ -56,11 +56,11 @@ def get_category_playlists(spotify):
         'uri': playlist_uri_list
     })
 
-    playlist_df.to_csv('data/playlists.csv', index=False)
+    playlist_df.to_csv('spotify_data/playlists.csv', index=False)
 # get_category_playlists(spotify)
 
 def get_tracks_albums_artists(spotify):
-    playlists_df = pd.read_csv('data/playlists.csv')
+    playlists_df = pd.read_csv('spotify_data/playlists.csv')
 
     tracks_df = pd.DataFrame()
     albums_df = pd.DataFrame()
@@ -178,9 +178,9 @@ def get_tracks_albums_artists(spotify):
         })
         artists_df = pd.concat([artists_df, artists_df_temp])
 
-    tracks_df.to_csv('data/tracks.csv', index=False)
-    albums_df.to_csv('data/albums.csv', index=False)
-    artists_df.to_csv('data/artists.csv', index=False)
+    tracks_df.to_csv('spotify_data/tracks.csv', index=False)
+    albums_df.to_csv('spotify_data/albums.csv', index=False)
+    artists_df.to_csv('spotify_data/artists.csv', index=False)
 get_tracks_albums_artists(spotify)
 
 
