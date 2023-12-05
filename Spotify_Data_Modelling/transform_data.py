@@ -1,5 +1,5 @@
 import pandas as  pd 
-
+from datetime import datetime
 
 def drop_duplicates(file, selected_columns, final_filename, column_in_array = None):
     actual_df = pd.read_csv(file)
@@ -38,3 +38,19 @@ drop_duplicates('spotify_data/artists.csv', ['artist_id', 'artist_name', 'uri', 
 drop_duplicates('spotify_data/tracks.csv', ['artists', 'track_id' ], 'data/artist_track.csv', 'artists')
 drop_duplicates('spotify_data/albums.csv', ['artists', 'album_id'], 'data/artist_album.csv', 'artists')
 
+
+# Only Artist CSV has 3 records with incosistent release_date values
+def is_valid_date(date_str):
+    try:
+        datetime.strptime(date_str, '%Y-%m-%d')
+        return True
+    except ValueError:
+        return False
+    
+df = pd.read_csv('data/album_intd.csv')
+df = df[df['release_date'].apply(is_valid_date)]
+df.to_csv('data/album.csv', index=False)
+
+artist_df = pd.read_csv('data/artist.csv')
+artist_df['genres'] = artist_df['genres'].apply(lambda x: str(x).replace('[', '{').replace(']', '}'))
+artist_df.to_csv('data/artist.csv', index=False)
