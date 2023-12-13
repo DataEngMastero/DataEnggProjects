@@ -6,3 +6,7 @@ __pycache__
 
 # Ignore config file
 config.py
+
+# Remove Ignore
+spotify_data
+data
