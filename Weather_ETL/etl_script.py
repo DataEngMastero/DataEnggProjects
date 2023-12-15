@@ -21,7 +21,7 @@ def get_weather_dataset():
         flat_response = pd.json_normalize(response.json())
         print(response.json())
 
-        city_df = flat_response[['location.name', 'location.region', 'location.country', 'location.lat', 'location.lon', 'location.tz_id', 'current.temp_c', 'current.temp_f', 'current.condition.text', 'current.condition.icon', 'current.wind_kph', 'current.pressure_in', 'current.precip_in', 'current.humidity', 'current.cloud']]
+        city_df = flat_response[['location.name', 'location.region', 'location.country', 'location.lat', 'location.lon', 'location.tz_id', 'current.temp_c', 'current.temp_f', 'current.condition.text', 'current.condition.icon', 'current.wind_kph', 'current.pressure_in', 'current.precip_in', 'current.humidity', 'current.cloud', 'current.last_updated_epoch']]
         weather_df = pd.concat([weather_df, city_df], ignore_index=True)
 
     print(len(weather_df))

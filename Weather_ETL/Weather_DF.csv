@@ -1,11 +1,11 @@
-location.name,location.region,location.country,location.lat,location.lon,location.tz_id,current.temp_c,current.temp_f,current.condition.text,current.condition.icon,current.wind_kph,current.pressure_in,current.precip_in,current.humidity,current.cloud
-New Delhi,Delhi,India,28.61,77.21,Asia/Kolkata,14.0,57.2,Mist,//cdn.weatherapi.com/weather/64x64/night/143.png,3.6,30.09,0.0,63,25
-Bangalore,Karnataka,India,12.97,77.59,Asia/Kolkata,21.0,69.8,Mist,//cdn.weatherapi.com/weather/64x64/night/143.png,15.1,30.12,0.0,83,25
-Pune,Maharashtra,India,18.52,73.86,Asia/Kolkata,19.3,66.7,Clear,//cdn.weatherapi.com/weather/64x64/night/113.png,6.1,30.0,0.0,53,3
-Bombay,Maharashtra,India,19.08,72.88,Asia/Kolkata,28.0,82.4,Overcast,//cdn.weatherapi.com/weather/64x64/night/122.png,3.6,29.94,0.0,58,0
-Jaipur,Rajasthan,India,26.91,75.79,Asia/Kolkata,16.0,60.8,Mist,//cdn.weatherapi.com/weather/64x64/night/143.png,3.6,30.12,0.0,68,0
-Chennai,Tamil Nadu,India,13.08,80.27,Asia/Kolkata,26.0,78.8,Mist,//cdn.weatherapi.com/weather/64x64/night/143.png,9.0,29.97,0.0,79,50
-Hyderabad,Andhra Pradesh,India,17.39,78.49,Asia/Kolkata,21.0,69.8,Mist,//cdn.weatherapi.com/weather/64x64/night/143.png,9.0,30.12,0.0,60,0
-Ahmedabad,Gujarat,India,23.02,72.57,Asia/Kolkata,20.0,68.0,Mist,//cdn.weatherapi.com/weather/64x64/night/143.png,9.0,30.0,0.0,73,0
-Lucknow,Uttar Pradesh,India,26.85,80.95,Asia/Kolkata,11.0,51.8,Mist,//cdn.weatherapi.com/weather/64x64/night/143.png,3.6,30.06,0.0,87,0
-Calcutta,West Bengal,India,22.57,88.36,Asia/Kolkata,17.0,62.6,Mist,//cdn.weatherapi.com/weather/64x64/night/143.png,3.6,30.06,0.0,72,25
+location.name,location.region,location.country,location.lat,location.lon,location.tz_id,current.temp_c,current.temp_f,current.condition.text,current.condition.icon,current.wind_kph,current.pressure_in,current.precip_in,current.humidity,current.cloud,current.last_updated_epoch
+New Delhi,Delhi,India,28.61,77.21,Asia/Kolkata,12.0,53.6,Mist,//cdn.weatherapi.com/weather/64x64/night/143.png,3.6,30.06,0.0,77,25,1702665000
+Bangalore,Karnataka,India,12.97,77.59,Asia/Kolkata,22.0,71.6,Mist,//cdn.weatherapi.com/weather/64x64/night/143.png,9.0,30.09,0.0,88,75,1702665000
+Pune,Maharashtra,India,18.52,73.86,Asia/Kolkata,17.9,64.2,Clear,//cdn.weatherapi.com/weather/64x64/night/113.png,3.6,29.96,0.0,53,4,1702665000
+Bombay,Maharashtra,India,19.08,72.88,Asia/Kolkata,26.0,78.8,Overcast,//cdn.weatherapi.com/weather/64x64/night/122.png,6.8,29.94,0.0,48,0,1702665000
+Jaipur,Rajasthan,India,26.91,75.79,Asia/Kolkata,15.0,59.0,Mist,//cdn.weatherapi.com/weather/64x64/night/143.png,3.6,30.09,0.0,63,0,1702665000
+Chennai,Tamil Nadu,India,13.08,80.27,Asia/Kolkata,26.0,78.8,Mist,//cdn.weatherapi.com/weather/64x64/night/143.png,11.2,29.94,0.07,89,75,1702665000
+Hyderabad,Andhra Pradesh,India,17.39,78.49,Asia/Kolkata,19.0,66.2,Mist,//cdn.weatherapi.com/weather/64x64/night/143.png,13.0,30.06,0.0,78,50,1702665000
+Ahmedabad,Gujarat,India,23.02,72.57,Asia/Kolkata,21.0,69.8,Mist,//cdn.weatherapi.com/weather/64x64/night/143.png,6.1,30.0,0.0,69,75,1702665000
+Lucknow,Uttar Pradesh,India,26.85,80.95,Asia/Kolkata,12.0,53.6,Mist,//cdn.weatherapi.com/weather/64x64/night/143.png,3.6,30.03,0.0,82,0,1702665000
+Calcutta,West Bengal,India,22.57,88.36,Asia/Kolkata,17.0,62.6,Mist,//cdn.weatherapi.com/weather/64x64/night/143.png,3.6,30.0,0.0,77,0,1702665000
