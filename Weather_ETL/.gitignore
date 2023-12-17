@@ -8,5 +8,5 @@ __pycache__
 config.py
 
 Weather_DF.csv
-
 .streamlit
+main_error.sh

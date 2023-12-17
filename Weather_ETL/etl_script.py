@@ -1,8 +1,17 @@
-import requests
-import config
+import os
+import sys
 import pandas as pd
+import requests
+import logging
+
+script_directory = "/Users/poojasingh/Documents/Git_Reposit/DataEnggProjects/Weather_ETL/"
+sys.path.append(script_directory)
+os.chdir(script_directory)
+
+import config
 from postgres import PostgresClient
 
+logging.basicConfig(level=logging.INFO)
 url = "https://weatherapi-com.p.rapidapi.com/current.json"
 headers = {
 	"X-RapidAPI-Key": config.RAPID_API_KEY,
@@ -26,9 +35,11 @@ def get_weather_dataset():
 
     print(len(weather_df))
     weather_df.to_csv('Weather_DF.csv', index=False)
+    logging.info("Weather DF generated!")
 get_weather_dataset()
 
 # Load Dataset in Postgres DB
+logging.info("Running the ETL script")
 postgres_client = PostgresClient(config.HOST, config.DBNAME, config.USERNAME, config.PASSWORD)
 print(config.weather_create_query)
 postgres_client.execute_query(config.weather_create_query)
@@ -38,3 +49,4 @@ for idx, row in temp_df.iterrows():
     postgres_client.execute_query(config.weather_insert_query, list(row))
 
 postgres_client.connection_close()
+logging.info("Script Executed")
