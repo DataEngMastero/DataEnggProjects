@@ -1,0 +1,11 @@
+# Ignore Mac system files
+.DS_store
+Steps.txt
+
+# Ignore __pycache__ folder
+__pycache__
+target/
+dbt_packages/
+logs/
+dump_files/
+dbt_venv/

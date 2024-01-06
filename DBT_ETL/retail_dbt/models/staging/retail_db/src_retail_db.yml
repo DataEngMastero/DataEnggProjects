@@ -1,0 +1,43 @@
+version: 2
+
+sources:
+  - name: retail_db
+    database: helical-sol-409813
+    schema: retail_db
+    tables: 
+      - name: products
+        columns:
+          - name: product_id
+            tests:
+              - unique
+              - not_null
+      - name: categories
+        columns:
+          - name: category_id
+            tests:
+              - unique
+              - not_null
+      - name: departments
+        columns:
+          - name: department_id
+            tests:
+              - unique
+              - not_null
+      - name: customers
+        columns:
+          - name: customer_id
+            tests:
+              - unique
+              - not_null
+      - name: orders
+        columns:
+          - name: order_id
+            tests:
+              - unique
+              - not_null
+      - name: order_items
+        columns:
+          - name: order_item_id
+            tests:
+              - unique
+              - not_null

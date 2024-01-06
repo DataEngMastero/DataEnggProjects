@@ -1,0 +1,42 @@
+version: 2
+
+models:
+  - name: stg_customers
+    description: Staged customer data from our shop.
+    columns: 
+      - name: customer_id
+        description: Primary key for customers.
+        tests:
+          - unique
+          - not_null
+
+  - name: stg_products
+    description: Staged products data from our shop.
+    columns: 
+      - name: product_id
+        description: Primary key for products.
+        tests:
+          - unique
+          - not_null
+      - name: department_name
+        tests:
+          - accepted_values:
+              values: ['Fan Shop', 'Footwear', 'Apparel', 'Fitness', 'Outdoors', 'Golf']
+
+  - name: stg_orders
+    description: Staged orders data from our shop.
+    columns:
+      - name: order_id
+        description: Primary key for orders.
+        tests:
+          - not_null
+      - name: status
+        description: "{{ doc('order_status') }}"
+        tests:
+          - accepted_values:
+              values: ['CLOSED', 'ON_HOLD','PENDING','CANCELED','COMPLETE', 'PROCESSING','PAYMENT_REVIEW','PENDING_PAYMENT','SUSPECTED_FRAUD']
+      - name: customer_id
+        tests:
+          - relationships:
+              to: ref('stg_orders')
+              field: customer_id
