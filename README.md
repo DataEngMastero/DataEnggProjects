@@ -8,4 +8,8 @@ This is the repository of my own personal projects to become better Data Enginee
 
 3. Building Data Warehouse using DBT - Technologies : Python, DBT, PostgresDB, BigQuery, Looker, and Shell
 
-4. Google PlayStore Analysis with PySpark - Technologies: Python, Pyspark
+4. Google PlayStore Analysis with PySpark - Technologies: Python, Pyspark, SQL
+
+5. Realtime Stock Analysis with Kafka - Technologies: Python, Kafka, GCS, BigQuery
+
+

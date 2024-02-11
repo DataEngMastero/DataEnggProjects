@@ -58,27 +58,3 @@ data warehouse provided by Google Cloud.
 ### RESOURCES -
 1. https://cloud.google.com/?authuser=2&hl=en ($300 or 90-day trial)
 2. DBT Documentation + DBT fundamentals
-3. 
-
-
-ChatGPT
-Designing a data warehouse involves creating a schema that optimizes for querying and reporting. Below is a possible design for your data warehouse tables based on the provided tables:
-
-Data Insights:
-Revenue by Category:
-Analyze sales revenue by category over time to identify top-performing and underperforming categories.
-Order Status Distribution:
-Understand the distribution of order statuses (e.g., processing, shipped, delivered) to monitor the order fulfillment process.
-Customer Purchase Behavior:
-Analyze customer purchase patterns, such as the average order value, frequency of purchases, and customer lifetime value.
-Product Performance:
-Evaluate the performance of products based on sales, quantity sold, and revenue generated.
-Customer Geography Analysis:
-Explore customer distribution by geography to identify regions with the highest customer concentration.
-Category Department Relationships:
-Understand how categories are distributed across different departments and identify any dependencies.
-Order Item Metrics:
-Calculate metrics such as average quantity per order item, average subtotal, and average product price.
-Customer Segmentation:
-Segment customers based on various criteria such as purchase frequency, order value, and geography to tailor marketing strategies.
-
